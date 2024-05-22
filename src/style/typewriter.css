@@ -53,3 +53,7 @@
     font-size: 15px;
   }
 }
+.typewriter p {
+      color: white;
+      text-align: center;
+    }
