@@ -200,13 +200,19 @@ footer {
   margin-bottom: 50px;
 }
 
+.testimonial .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .testimonial-item {
   text-align: center;
-  margin-bottom: 40px;
   padding: 30px;
   background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
+  margin-bottom: 20px; /* Ensure some space between rows on smaller screens */
+  flex: 1 1 100%; /* Default to full width on small screens */
 }
 
 .testimonial-item:hover {
@@ -242,9 +248,41 @@ footer {
   color: #999;
   margin-top: 10px;
 }
+
 .tes {
   color: #000;
 }
+
+/* Responsive Layouts */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .testimonial-item {
+    flex: 1 1 100%; /* Each testimonial takes full width */
+  }
+}
+
+/* Small devices (portrait tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .testimonial-item {
+    flex: 1 1 100%; /* Each testimonial takes full width */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .testimonial-item {
+    flex: 1 1 50%; /* Two testimonials per row */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .testimonial-item {
+    flex: 1 1 25%; /* Four testimonials in one row */
+  }
+}
+
 /* Gallery Section */
 .gallery {
   margin-top: 80px;
